@@ -652,12 +652,12 @@ class RefreshController {
               ?.then((_) {
             SmartRefresher.ofState(position.context.storageContext)
                 ?.setCanDrag(true);
-            headerMode.value = RefreshStatus.refreshing;
+            headerMode?.value = RefreshStatus.refreshing;
           });
         });
       } else {
         return Future.value().then((_) {
-          headerMode.value = RefreshStatus.refreshing;
+          headerMode?.value = RefreshStatus.refreshing;
         });
       }
     });
